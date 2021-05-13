@@ -1,0 +1,10 @@
+2021-05-12 16:10:02,751: 11_Starter_Log.py: ERROR: This is an error message
+2021-05-12 16:10:02,752: 11_Starter_Log.py: CRITICAL: This is a critical message
+2021-05-12 16:11:00,260: 11_Starter_Log.py: ERROR: This is an error message
+2021-05-12 16:11:00,260: 11_Starter_Log.py: CRITICAL: This is a critical message
+2021-05-12 16:11:16,895: 11_Starter_Log.py: ERROR: This is an error message
+2021-05-12 16:11:16,895: 11_Starter_Log.py: CRITICAL: This is a critical message
+2021-05-12 16:11:22,698: 11_Starter_Log.py: ERROR: This is an error message
+2021-05-12 16:11:22,699: 11_Starter_Log.py: CRITICAL: This is a critical message
+2021-05-12 16:11:35,809: 11_Starter_Log.py: ERROR: This is an error message
+2021-05-12 16:11:35,809: 11_Starter_Log.py: CRITICAL: This is a critical message

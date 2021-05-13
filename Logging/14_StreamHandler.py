@@ -1,23 +1,25 @@
 import logging
+import sys
 
 # Create logger
 logger = logging.getLogger(__name__) # the name can be hardcoded if I like
 logger.setLevel(logging.DEBUG)
 
-# Set file handler with formatter
-file_handler = logging.FileHandler('Logging/logs/11_FileHandler.log')
+# Set StreamHandler
+# Arguments can be: sys.stdout or sys.stderr / sys.stderr is default
+stream_handler = logging.StreamHandler()
 
 # Set levels
-file_handler.setLevel(logging.DEBUG)
+stream_handler.setLevel(logging.DEBUG)
 
 # Create formatters
 file_formatter = logging.Formatter('%(asctime)s: %(name)s: %(filename)s: %(levelname)s: %(message)s')
 
 # Set fiel and stream handler with formatter
-file_handler.setFormatter(file_formatter)
+stream_handler.setFormatter(file_formatter)
 
 # Add Handler to Logger
-logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
 
 # Log messages
 logger.debug('This is a debug message v1')
@@ -64,4 +66,3 @@ if result is not None:
     logger.info(result)
 else:
     logger.warning('Deviation failed')
-

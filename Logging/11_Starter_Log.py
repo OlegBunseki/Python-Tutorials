@@ -1,18 +1,7 @@
 import logging
-
-
-# INFO: https://docs.python.org/3/library/logging.html
+import logging.config
 
 # With the logging module imported, you can use something called a “logger” to log messages that you want to see. 
-# By default, there are 5 standard levels indicating the severity of events. 
-# Each has a corresponding method that can be used to log events at that level of severity. 
-# The defined levels, in order of increasing severity, are the following:
-
-# 1. DEBUG
-# 2. INFO
-# 3. WARNING
-# 4. ERROR
-# 5. CRITICAL
 
 # You can use the basicConfig(**kwargs) method to configure the logging.
 
@@ -29,9 +18,10 @@ import logging
 
 
 # Create a Logging File (this will be filled up with every new message)
-logging.basicConfig(filename='./Logging/logs/10_Starter_Log.log', 
+logging.basicConfig(filename='./Logging/logs/11_Starter_Log.log', 
                     level=logging.ERROR,
                     format='%(asctime)s: %(filename)s: %(levelname)s: %(message)s') 
+
 
 # Run Log - First try
 logging.debug('This is a debug message')
@@ -39,17 +29,3 @@ logging.info('This is an info message')
 logging.warning('This is a warning message')
 logging.error('This is an error message')
 logging.critical('This is a critical message')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
