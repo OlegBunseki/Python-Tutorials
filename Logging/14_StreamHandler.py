@@ -5,28 +5,20 @@ import sys
 logger = logging.getLogger(__name__) # the name can be hardcoded if I like
 logger.setLevel(logging.DEBUG)
 
-# Set StreamHandler
-# Arguments can be: sys.stdout or sys.stderr / sys.stderr is default
-stream_handler = logging.StreamHandler()
-
-# Set levels
-stream_handler.setLevel(logging.DEBUG)
-
-# Create formatters
 file_formatter = logging.Formatter('%(asctime)s: %(name)s: %(filename)s: %(levelname)s: %(message)s')
 
-# Set fiel and stream handler with formatter
+stream_handler = logging.StreamHandler()
+stream_handler.setLevel(logging.DEBUG)
 stream_handler.setFormatter(file_formatter)
 
-# Add Handler to Logger
 logger.addHandler(stream_handler)
 
 # Log messages
-logger.debug('This is a debug message v1')
-logger.info('This is an info message v1')
-logger.warning('This is a warning message v1')
-logger.error('This is an error message v1')
-logger.critical('This is a critical message v1')
+logger.debug('This is a debug message')
+logger.info('This is an info message')
+logger.warning('This is a warning message')
+logger.error('This is an error message')
+logger.critical('This is a critical message')
 
 a = 20
 b = 10

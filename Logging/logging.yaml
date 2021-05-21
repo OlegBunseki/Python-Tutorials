@@ -1,0 +1,56 @@
+version: 1
+disable_existing_loggers: true
+# If specified as False, loggers which exist when this call is made are left enabled. 
+# The default is True because this enables old behaviour in a backward-compatible way. 
+# This behaviour is to disable any existing non-root loggers unless they or their ancestors are explicitly named in the logging configuration.
+
+### STRUCTURE:
+# formatters:
+# handlers:
+# loggers:
+# root:
+
+formatters:
+    standard:
+        format: "%(asctime)s - %(name)s - %(filename)s - %(levelname)s - %(message)s"
+
+handlers:
+    console:
+        class: logging.StreamHandler
+        level: INFO    
+        formatter: standard
+        stream: ext://sys.stdout
+
+    error_handler:
+        class: logging.FileHandler
+        level: ERROR
+        formatter: standard
+        filename: ./Logging/logs/logging_yaml_error.log
+
+    info_handler:
+        class: logging.handlers.RotatingFileHandler
+        level: INFO
+        maxBytes: 10485760
+        backupCount: 3
+        formatter: standard
+        filename: ./Logging/logs/logging_yaml_info.log
+
+    debug_handler:
+        class: logging.handlers.RotatingFileHandler
+        level: INFO
+        maxBytes: 10485760
+        backupCount: 3
+        formatter: standard
+        filename: ./Logging/logs/logging_yaml_debug.log
+
+loggers:
+    test:
+        level: DEBUG
+        handlers: [console, info_handler]
+    dev:
+        level: DEBUG
+        handlers: [error_handler, info_handler]
+    prod:
+        level: DEBUG
+        handlers: [console, error_handler]
+

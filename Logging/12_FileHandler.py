@@ -1,5 +1,6 @@
 import logging
 
+
 # Create logger
 logger = logging.getLogger(__name__) # the name can be hardcoded if I like
 logger.setLevel(logging.DEBUG)       # DEFAULT: WARNING!
@@ -8,7 +9,7 @@ logger.setLevel(logging.DEBUG)       # DEFAULT: WARNING!
 file_handler = logging.FileHandler('Logging/logs/11_FileHandler.log')
 
 # Set levels
-file_handler.setLevel(logging.DEBUG)   # logger.setLevel is the treshold! Wont log DEBUG is logger is set to INFO!
+file_handler.setLevel(10)   # logger.setLevel is the treshold! Wont log DEBUG is logger is set to INFO!
 
 # Create formatters
 file_formatter = logging.Formatter('%(asctime)s: %(name)s: %(filename)s: %(levelname)s: %(message)s')

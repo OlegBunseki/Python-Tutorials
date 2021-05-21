@@ -1,7 +1,6 @@
 import sys
  
-# Save the current stdout so that we can revert sys.stdou after we complete
-# our redirection
+# Save the current stdout so that we can revert sys.stdout after we complete our redirection
 stdout_fileno = sys.stdout
  
 sample_input = ['Hi', 'Hello from AskPython', 'exit']
